@@ -5,9 +5,6 @@ using namespace std;
 
 int main()
 {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-
     int t = 0;
     cin >> t;
     vector<int> result(t);
@@ -17,7 +14,7 @@ int main()
         int n = 0, k = 0;
         cin >> n >> k;
         int temp = k;
-        int evens = 0; // Track even numbers for k = 4
+        int evens = 0; 
 
         for (int i = 0; i < n; ++i)
         {
@@ -35,10 +32,9 @@ int main()
                 temp = min_op;
             }
         }
-
-        // Special case for k = 4
         if (k == 4)
         {
+
             int ops_for_two_evens = max(0, 2 - evens);
             if (ops_for_two_evens < temp)
             {
